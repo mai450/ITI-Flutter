@@ -10,13 +10,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      home: MyHomePage(
+        title: '',
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -30,47 +28,72 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Center(child: Text('ITI 8-2023')),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Mai Awad Sadat',
-              style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.grey,
-                  fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+        body: Stack(
+      children: [
+        // -------------------------------  background image  ---------------------------------
+        Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('asset/background.jpg'),
+            fit: BoxFit.cover,
+          )),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 250,
+              ),
+              // ----------------------------  center image  -----------------------------------------
+              const Image(
+                image: AssetImage('asset/6-removebg-preview.png'),
+                height: 120,
+              ),
+              // --------------------------  frist text (ITI Quiz App) -------------------------------
+              const Text(
+                'ITI Quiz App',
+                style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: 'Pacifico',
+                    color: Color.fromARGB(255, 255, 235, 59)),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              // -------------------------  second tex (We Are creative .....) ----------------------
+              const Text(
+                'We Are Creative, enjoy our App',
+                style: TextStyle(
+                    fontSize: 25,
+                    fontFamily: 'DancingScript',
+                    color: Colors.white),
+              ),
+              const SizedBox(
+                height: 200,
+              ),
+              // -----------------------  start button -----------------------------------------------
+              ElevatedButton(
+                onPressed: () {},
+                style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.green),
+                    padding: MaterialStatePropertyAll(
+                        EdgeInsets.symmetric(horizontal: 140, vertical: 4))),
+                child: const Text(
+                  'Start',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontFamily: 'EBGaramond'),
+                ),
+              )
+            ],
+          ),
+        ),
+      ],
+    ));
   }
 }

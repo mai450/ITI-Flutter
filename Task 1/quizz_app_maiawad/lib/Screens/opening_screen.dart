@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizz_app_maiawad/Screens/login_screen.dart';
 
 class OpeningScreen extends StatelessWidget {
   const OpeningScreen({super.key});
@@ -66,7 +67,14 @@ class OpeningScreen extends StatelessWidget {
               width: double.infinity,
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const LoginScreen(),
+                    ),
+                  );
+                },
                 style: const ButtonStyle(
                   backgroundColor: MaterialStatePropertyAll(Colors.green),
                 ),

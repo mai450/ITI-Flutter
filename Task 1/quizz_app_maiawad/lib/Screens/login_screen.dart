@@ -12,6 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.green,
         body: Column(
           children: [
@@ -152,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           shape: const StadiumBorder(),
                           elevation: 10,
                           shadowColor: Colors.grey,
-                          minimumSize: Size(130, 40)),
+                          minimumSize: Size(140, 40)),
                       child: const Text(
                         'Login',
                         style: TextStyle(

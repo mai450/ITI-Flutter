@@ -36,20 +36,20 @@ class _LoginScreenState extends State<LoginScreen> {
                       topLeft: Radius.circular(40),
                       topRight: Radius.circular(40),
                     )),
-                //---------------------------------------------  padding for login container    -------------------------------------------------
+//---------------------------------------------  padding for login container    -------------------------------------------------
                 child: Column(
                   children: [
-                    //--------------------------------------------  login text ----------------------------------------------------------------------
+//--------------------------------------------  login text ----------------------------------------------------------------------
                     const Text(
                       'Login',
                       style:
                           TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                     ),
-                    //--------------------------------------------  space between login text and username --------------------------------------------
+//--------------------------------------------  space between login text and username --------------------------------------------
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.04,
                     ),
-                    //-------------------------------------------  username  ------------------------------------------------------------------------
+//-------------------------------------------  username  ------------------------------------------------------------------------
                     TextField(
                       decoration: InputDecoration(
                           hintText: 'Username',
@@ -73,11 +73,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           )),
                     ),
-                    //-----------------------------------------  space between username and password  --------------------------------------------------
+//-----------------------------------------  space between username and password  --------------------------------------------------
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
-                    //-----------------------------------------  password ----------------------------------------------------------------------------
+//-----------------------------------------  password ----------------------------------------------------------------------------
                     TextField(
                       decoration: InputDecoration(
                           hintText: 'Password',
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
 
-                    //-----------------------------------------------  padding form the left for the row ----------------------------------------------
+//-----------------------------------------------  padding form the left for the row ----------------------------------------------
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         const SizedBox(
                           width: 10,
                         ),
-                        //-----------------------------------------------  register button  ---------------------------------------------------------
+//-----------------------------------------------  register button  ---------------------------------------------------------
                         InkWell(
                             onTap: () {},
                             child: const Text(
@@ -133,18 +133,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             )),
                       ],
                     ),
-                    //----------------------------------------------  space between first row and login button -------------------------------------
+//----------------------------------------------  space between first row and login button -------------------------------------
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.06,
                     ),
-                    //---------------------------------------------- login button -----------------------------------------------------------------
+//---------------------------------------------- login button -----------------------------------------------------------------
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute<void>(
-                            builder: (BuildContext context) =>
-                                const CategoryScreen(),
+                            builder: (BuildContext context) => CategoryScreen(),
                           ),
                         );
                       },
@@ -161,17 +160,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    //--------------------------------------------------  space between login button and finger print icon ------------------------------------
+//--------------------------------------------------  space between login button and finger print icon ------------------------------------
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.02,
                     ),
-                    //-------------------------------------------------  finger print icon --------------------------------------------------------
+//-------------------------------------------------  finger print icon --------------------------------------------------------
                     const Icon(
                       Icons.fingerprint,
                       color: Colors.blue,
                       size: 50,
                     ),
-                    //--------------------------------------------------  space between finger print icon and text under it  ------------------------------------
+//--------------------------------------------------  space between finger print icon and text under it  ------------------------------------
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.01,
                     ),
@@ -180,13 +179,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       'Use Touch ID',
                       style: TextStyle(color: Colors.grey, fontSize: 12),
                     ),
-                    //--------------------------------------------------  space between text and bottom row  ------------------------------------
+//--------------------------------------------------  space between text and bottom row  ------------------------------------
                     Spacer(),
-                    // --------------------------------------------------  bottom row ------------------------------------------------------------
+// --------------------------------------------------  bottom row ------------------------------------------------------------
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        //--------------------------------------------------  checkbox -------------------------------------------------------------
+//--------------------------------------------------  checkbox -------------------------------------------------------------
                         Row(
                           children: [
                             Checkbox(
@@ -201,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
 
-                        //--------------------------------------------------  forget password button  ----------------------------------------------
+//--------------------------------------------------  forget password button  ----------------------------------------------
                         TextButton(
                             onPressed: () {},
                             child: const Text(
